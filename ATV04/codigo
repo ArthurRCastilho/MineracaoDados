@@ -1,0 +1,96 @@
+import sqlite3
+
+# Caminho do arquivo
+db_path = "./shopping.sqlite"
+
+# Conectar ao banco de dados SQLite
+conn = sqlite3.connect(db_path)
+cursor = conn.cursor()
+
+# Consultar as tabelas disponíveis no banco de dados
+cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
+tables = cursor.fetchall()
+
+# Fechar conexão temporariamente
+conn.close()
+
+# Exibir as tabelas disponíveis
+tables
+
+
+
+# Reconectar ao banco de dados
+conn = sqlite3.connect(db_path)
+cursor = conn.cursor()
+
+# Consultar informações sobre as colunas da tabela
+cursor.execute("PRAGMA table_info(customer_shopping_data);")
+columns_info = cursor.fetchall()
+
+# Fechar a conexão
+conn.close()
+
+# Exibir as colunas disponíveis
+columns_info
+
+
+
+# Reconectar ao banco de dados
+conn = sqlite3.connect(db_path)
+cursor = conn.cursor()
+
+# 1. Número total de compras por categoria
+cursor.execute("""
+    SELECT category, COUNT(*) as total_compras
+    FROM customer_shopping_data
+    GROUP BY category
+    ORDER BY total_compras DESC;
+""")
+compras_por_categoria = cursor.fetchall()
+
+# 2. Média de idade dos clientes por shopping
+cursor.execute("""
+    SELECT shopping_mall, AVG(age) as media_idade
+    FROM customer_shopping_data
+    GROUP BY shopping_mall
+    ORDER BY media_idade DESC;
+""")
+media_idade_por_shopping = cursor.fetchall()
+
+# 3. Faturamento total por método de pagamento
+cursor.execute("""
+    SELECT payment_method, SUM(price * quantity) as faturamento_total
+    FROM customer_shopping_data
+    GROUP BY payment_method
+    ORDER BY faturamento_total DESC;
+""")
+faturamento_por_pagamento = cursor.fetchall()
+
+# 4. Top 5 categorias mais vendidas em quantidade de itens
+cursor.execute("""
+    SELECT category, SUM(quantity) as total_itens_vendidos
+    FROM customer_shopping_data
+    GROUP BY category
+    ORDER BY total_itens_vendidos DESC
+    LIMIT 5;
+""")
+top_categorias_vendidas = cursor.fetchall()
+
+# 5. Ticket médio das compras (média do valor total por compra)
+cursor.execute("""
+    SELECT AVG(price * quantity) as ticket_medio
+    FROM customer_shopping_data;
+""")
+ticket_medio = cursor.fetchone()[0]
+
+# Fechar a conexão
+conn.close()
+
+# Exibir os resultados
+{
+    "Compras por categoria": compras_por_categoria,
+    "Média de idade por shopping": media_idade_por_shopping,
+    "Faturamento por método de pagamento": faturamento_por_pagamento,
+    "Top 5 categorias mais vendidas": top_categorias_vendidas,
+    "Ticket médio": ticket_medio
+}
