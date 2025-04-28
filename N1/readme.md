@@ -56,11 +56,11 @@ O teste de hipótese indicou que não existe diferença estatisticamente signifi
 Análise concluída.<br>
 
 ## Gráficos
-<img scr="imgs/Graf01.jpg" alt="Grafico01"/>
-<img scr="imgs/Graf02-Historigrama.jpg" alt="Grafico 02"/>
-<img scr="imgs/Graf03-Evolução.jpg" alt="Grafico 03"/>
+<img scr="./imgs/Graf01.jpg" alt="Grafico01"/>
+<img scr="./imgs/Graf02-Historigrama.jpg" alt="Grafico 02"/>
+<img scr="./imgs/Graf03-Evolução.jpg" alt="Grafico 03"/>
 
 ## Avaliação
-<img scr="imgs/N1-Avaliação.jpg" alt="Página 01"/>
-<img scr="imgs/N1-Avaliação-pg2.jpg" alt="Página 01"/>
-<img scr="imgs/N1-Avaliação-pg3.jpg" alt="Página 01"/>
+<img scr="./imgs/N1-Avaliação.jpg" alt="Página 01"/>
+<img scr="./imgs/N1-Avaliação-pg2.jpg" alt="Página 01"/>
+<img scr="./imgs/N1-Avaliação-pg3.jpg" alt="Página 01"/>
