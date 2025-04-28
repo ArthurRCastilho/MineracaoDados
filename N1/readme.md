@@ -1,7 +1,7 @@
 # Avaliação 01 - N1
 
 ## Retorno
-- ![n1_avaliacao.py]() <br>
+- [n1_avaliacao.py](https://github.com/ArthurRCastilho/MineracaoDados/blob/main/N1/n1_avaliacao.py) <br>
 
 1. Coletando dados históricos de VALE3 e PETR4...<br>
 YF.download() has changed argument auto_adjust default to True<br>
@@ -56,11 +56,11 @@ O teste de hipótese indicou que não existe diferença estatisticamente signifi
 Análise concluída.<br>
 
 ## Gráficos
-<img scr="./imgs/Graf01.jpg"/>
-<img scr="./imgs/Graf02-Historigrama.jpg"/>
-<img scr="./imgs/Graf03-Evolução.jpg"/>
+<img scr="imgs/Graf01.jpg" alt="Grafico01"/>
+<img scr="imgs/Graf02-Historigrama.jpg" alt="Grafico 02"/>
+<img scr="imgs/Graf03-Evolução.jpg" alt="Grafico 03"/>
 
 ## Avaliação
-<img scr="./imgs/N1-Avaliação.jpg"/>
-<img scr="./imgs/N1-Avaliação-pg2.jpg"/>
-<img scr="./imgs/N1-Avaliação-pg3.jpg"/>
+<img scr="imgs/N1-Avaliação.jpg" alt="Página 01"/>
+<img scr="imgs/N1-Avaliação-pg2.jpg" alt="Página 01"/>
+<img scr="imgs/N1-Avaliação-pg3.jpg" alt="Página 01"/>
