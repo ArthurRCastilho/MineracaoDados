@@ -1,5 +1,9 @@
 # Avaliação 01 - N1
 
+# Alunos
+- [Arthur Rodrigues](https://github.com/ArthurRCastilho)
+- [Rhennan Augusto Santana do Carmo](https://github.com/RhennanAugusto)
+
 ## Retorno
 - [n1_avaliacao.py](https://github.com/ArthurRCastilho/MineracaoDados/blob/main/N1/n1_avaliacao.py) <br>
 
